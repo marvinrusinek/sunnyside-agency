@@ -1,0 +1,115 @@
+@import "src/app/sunnyside-agency/containers/main/mixins";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  // font-family: $font-body;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: slategray; //$darkGrayishBlue
+
+  @include breakpoint-up(large) {
+    font-size: 1.8rem;
+  }
+}
+
+h1, h2, h3 {
+  // font-family: $font-heading;
+  font-weight: 900;
+  margin-top: 0;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 3.4rem;
+  color: white;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+
+  @include breakpoint-up(medium) {
+    font-size: 4.5rem;
+    letter-spacing: 1.4rem;
+  }
+}
+
+h2 {
+  font-size: 3.3rem;
+  color: darkblue; // $veryDarkDesaturatedBlue;
+  margin-bottom: 3.8rem;
+
+  @include breakpoint-up(large) {
+    font-size: 4rem;
+    margin-bottom: 4.6rem;
+  }
+}
+
+h3 {
+  font-size: 2.8rem;
+  margin-bottom: 3.2rem;
+
+  @include breakpoint-up(large) {
+    font-size: 3rem;
+  }
+}
+
+p {
+  margin-top: 0;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+}
+
+
+// Button
+button, .button {
+  all: unset;
+}
+// Spacing
+.padding-x {
+  padding-left: 2.2rem;
+  padding-right: 2.2rem;
+}
+
+.p-t-3 {
+  padding-top: 3rem;
+}
+
+// Visibility
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.no-scroll {
+  overflow-y: hidden;
+}
